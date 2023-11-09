@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LearnController;
+use App\Http\Controllers\SingleActionControllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/basicController',[LearnController::class,'index']);
+//alternative away to dealer routing 
+//Route::get('/home','App\Http\Controllers\LearnController@detail');
+Route::get('/del',[LearnController::class,'detail']);
+Route::get('/signlecontroller',SingleActionControllers::class);
