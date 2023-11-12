@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LearnController;
 use App\Http\Controllers\SingleActionControllers;
-
+use App\Http\Controllers\Post\UserPostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +24,4 @@ Route::get('/basicController',[LearnController::class,'index']);
 //Route::get('/home','App\Http\Controllers\LearnController@detail');
 Route::get('/del',[LearnController::class,'detail']);
 Route::get('/signlecontroller',SingleActionControllers::class);
+Route::get('/createpost',[UserPostController::class,'create']);
